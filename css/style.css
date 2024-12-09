@@ -59,6 +59,46 @@ body, html {
     margin-bottom: 20px;
     color: #1c92d2;
   }
+
+  /* Social Links Section */
+.social-icons a {
+    color: #6c757d; /* Subtle gray for the default color */
+    font-size: 2rem; /* Adjust the size of the icons */
+    margin-right: 15px; /* Spacing between icons */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .social-icons a:hover {
+    color: #0072b1; /* LinkedIn Blue */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+  }
+  
+  /* Specific Colors for Each Platform */
+  .social-icons a[href*="linkedin"] {
+    color: #0a66c2; /* Default LinkedIn Blue */
+  }
+  
+  .social-icons a[href*="github"] {
+    color: #333; /* Default GitHub Dark Gray */
+  }
+  
+  .social-icons a[href*="instagram"] {
+    color: #c13584; /* Default Instagram Pink */
+  }
+  
+  /* Hover Effects for Each Platform */
+  .social-icons a[href*="linkedin"]:hover {
+    color: #005582; /* Darker LinkedIn Blue */
+  }
+  
+  .social-icons a[href*="github"]:hover {
+    color: #000; /* Black on hover for GitHub */
+  }
+  
+  .social-icons a[href*="instagram"]:hover {
+    color: #e95950; /* Brighter Instagram Red */
+  }
+  
   
   /* Cursor-following Orb */
   .cursor-orb {
