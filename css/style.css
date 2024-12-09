@@ -2,9 +2,10 @@
 body, html {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    background: #121212; /* Dark theme */
-    color: #e0e0e0;
+    background: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
     overflow-x: hidden;
   }
   
@@ -19,9 +20,10 @@ body, html {
   }
   
   #sideNav img {
+    border: 3px solid #444;
     border-radius: 50%;
     width: 150px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     display: block;
   }
   
@@ -59,59 +61,52 @@ body, html {
     margin-bottom: 20px;
     color: #1c92d2;
   }
-
-  /* Social Links Section */
-.social-icons a {
-    color: #6c757d; /* Subtle gray for the default color */
-    font-size: 2rem; /* Adjust the size of the icons */
-    margin-right: 15px; /* Spacing between icons */
-    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
-  }
   
-  .social-icons a:hover {
-    color: #0072b1; /* LinkedIn Blue */
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
-  }
-  
-  /* Specific Colors for Each Platform */
-  .social-icons a[href*="linkedin"] {
-    color: #0a66c2; /* Default LinkedIn Blue */
-  }
-  
-  .social-icons a[href*="github"] {
-    color: #333; /* Default GitHub Dark Gray */
-  }
-  
-  .social-icons a[href*="instagram"] {
-    color: #c13584; /* Default Instagram Pink */
-  }
-  
-  /* Hover Effects for Each Platform */
-  .social-icons a[href*="linkedin"]:hover {
-    color: #005582; /* Darker LinkedIn Blue */
-  }
-  
-  .social-icons a[href*="github"]:hover {
-    color: #000; /* Black on hover for GitHub */
-  }
-  
-  .social-icons a[href*="instagram"]:hover {
-    color: #e95950; /* Brighter Instagram Red */
-  }
-  
-  
-  /* Cursor-following Orb */
-  .cursor-orb {
+/* Cursor-following face */
+.face-container {
+    width: 150px;
+    height: 150px;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    background: radial-gradient(circle, #1c92d2, #0b486b);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 1000;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.05s linear;
+    background: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+    transition: opacity 0.3s ease; /* Smooth transition for transparency */
   }
+  
+  .face {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Eye styles */
+  .eye {
+    width: 15px;
+    height: 15px;
+    background: #1c1c1c;
+    border-radius: 50%;
+    position: absolute;
+    top: 35%; /* Adjust to position eyes */
+  }
+  
+  .eye.left {
+    left: 25%;
+  }
+  
+  .eye.right {
+    right: 25%;
+  }
+  
+
   
